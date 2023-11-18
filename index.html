@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon (1).ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+
+        <div class="display-content">
+            <input readonly  class="display" placeholder="Password" datapassworddisplay>
+            <button class="copybtn" datacopy>
+                <span class="tooltip" datacopymessage></span>
+                <img src="copy.svg" alt="" width="25" height="25">
+            </button>
+        </div>
+        <div class="inputcontainer">
+
+            <!-- Password length section  -->
+            <div class="lengthcontainer">
+                <p class="para">Password Length</p>
+                <p datalenghtnumber class="para">10</p>
+            </div>
+
+            <!-- slider  -->
+            <input type="range" min="1" max="20" step="1" class="slider" datalengthslider>
+
+            <!-- checkboxes -->
+            <div class="check">
+                <input type="checkbox" id="uppercase"> <label for="uppercase">Includes uppercase alphabets</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="lowercase"> <label for="lowercase">Includes lowercase alphabets</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="numbers"> <label for="numbers">Includes Numbers</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="symbols"> <label for="symbols">Includes Symbols</label>
+            </div>
+            <!-- strength section  -->
+            <div class="strengthcontainer">
+                <p>Strength</p>
+                <div dataindicator class="indicator"></div>
+            </div>
+
+            <!-- Password Generates -->
+            <button class="generatebutton">
+                Generate Password
+            </button>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
